@@ -1,3 +1,7 @@
+.nav-menu {
+    border-bottom: 0.1rem solid black;
+}
+
 .nav-menu li {
     display: inline;
     list-style: none;
@@ -121,6 +125,37 @@ ul {
     .contact-info {
         order: 5;
     }
+}
+
+.motto-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5rem;
+}
+
+.motto-wrapper {
+    background-color: hsl(200, 18%, 26%);
+    color: hsl(204, 15%, 94%);
+    width: 30%;
+}
+
+.motto-text {
+    font-size: 4.21em;
+    font-weight: 100;
+    letter-spacing: 0.5rem;
+}
+
+.motto-top {
+    padding: 2.4rem 2.4rem 0 4.8rem;
+}
+
+.motto-other {
+    padding: 0 2.4rem 0 4.8rem;
+}
+
+.image-wrapper {
+    display: inline-flex;
 }
 
 img {
