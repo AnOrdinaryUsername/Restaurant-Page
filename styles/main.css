@@ -5,6 +5,13 @@
 .nav-menu li {
     display: inline;
     list-style: none;
+    padding: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .nav-menu li {
+        padding: 0;
+    }
 }
 
 .nav-menu li a,
@@ -28,13 +35,19 @@ nav a {
     font-size: 1.33em;
 }
 
+@media (max-width: 768px) {
+    nav a {
+        font-size: 1em;
+        margin: 0.8rem 1.4rem;
+    }
+}
+
 ul {
     align-items: center;
     box-shadow: 0 0.5rem 1.4rem lightgrey;
     display: flex;
     height: 10rem;
-    justify-content: space-evenly;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 4.8rem;
     position: relative;
 }
 
@@ -127,40 +140,163 @@ ul {
     }
 }
 
-.motto-container {
+main {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 5rem;
-}
-
-.motto-wrapper {
-    background-color: hsl(200, 18%, 26%);
-    color: hsl(204, 15%, 94%);
-    width: 30%;
-}
-
-.motto-text {
-    font-size: 4.21em;
-    font-weight: 100;
-    letter-spacing: 0.5rem;
-}
-
-.motto-top {
-    padding: 2.4rem 2.4rem 0 4.8rem;
-}
-
-.motto-other {
-    padding: 0 2.4rem 0 4.8rem;
+    flex-flow: column wrap;
 }
 
 .image-wrapper {
     display: inline-flex;
+    justify-content: center;
+    margin: 4%;
+}
+
+.burger {
+    box-shadow: 0px 5px 10px 4px grey;
 }
 
 img {
     height: auto;
     max-width: 100%;
+}
+
+.motto-container {
+    align-items: center;
+    background-color: hsl(200, 18%, 26%);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.motto {
+    border-bottom: 0.05rem solid white;
+    color: hsl(0, 0%, 100%);
+    font-size: 2.37em;
+    font-style: oblique;
+    font-weight: 100;
+    letter-spacing: 0.8rem;
+    margin: 5% 0;
+    padding-bottom: 2.4rem;
+    padding-top: 2.4rem;
+    text-align: center;
+    text-shadow: -0.5rem 0.1rem hsl(0, 0%, 50%);
+}
+
+@media (min-width: 1200px) {
+    .motto {
+        font-size: 4.21em;
+    }
+}
+
+.diner-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.inside-wrapper {
+    margin: 0 7%;
+    padding-bottom: 5%;
+}
+
+.inside-diner {
+    height: auto;
+}
+
+.mission-container {
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .mission-container {
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 1200px) {
+    .mission-container {
+        margin-left: 5%;
+        width: 30%;
+    }
+}
+
+.subheader {
+    font-size: 5.61em;
+    letter-spacing: 0.2rem;
+}
+
+.subtext {
+    font-size: 1.78em;
+    padding-top: 3.6rem;
+    resize: horizontal;
+}
+
+@media (max-width: 900px) {
+    .subheader {
+        font-size: 2.37em;
+        padding: 1.2rem 2.4rem;
+    }
+
+    .subtext {
+        font-size: 1.33em;
+        padding: 1.2rem 2.4rem;
+    }
+}
+
+p {
+    line-height: 2;
+}
+
+.gallery {
+    background-color: hsl(0, 0%, 90%);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.gallery>h2 {
+    font-size: 5.61em;
+    letter-spacing: 0.2rem;
+    padding: 4.8rem 0;
+    text-align: center;
+}
+
+.gallery-images {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding-bottom: 4.8rem;
+}
+
+.gallery-images>img {
+    height: auto;
+    max-width: 30rem;
+    max-height: 30rem;
+    width: auto;
+}
+
+@media (max-width: 576px) {
+    .gallery-images *:not(:first-child):not(:last-child) {
+        margin: 1.2rem 0;
+    }
+}
+
+footer {
+    align-items: center;
+    background-color: hsl(200, 18%, 26%);
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 1em;
+    height: 5rem;
+    justify-content: center;
+}
+
+footer>p {
+    color: hsl(0, 0%, 90%);
 }
 
 html {
