@@ -21,7 +21,7 @@ nav a {
     letter-spacing: 1px;
     font-weight: 400;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
-    font-size: 1.35em;
+    font-size: 1.33em;
 }
 
 ul {
@@ -34,10 +34,19 @@ ul {
     position: relative;
 }
 
+@media (max-width: 576px) {
+    ul {
+        align-items: center;
+        flex-flow: column wrap;
+        height: 100%;
+        justify-content: center;
+    }
+}
+
 /* Effect 7: second border slides up */
 .cl-effect-7 a {
     padding: 12px 10px 10px;
-    color: #566473;
+    color: hsl(0, 0%, 0%);
     text-shadow: none;
     font-weight: 700;
 }
@@ -49,7 +58,7 @@ ul {
     left: 0;
     width: 100%;
     height: 3px;
-    background: #566473;
+    background: hsl(0, 0%, 0%);
     content: '';
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
@@ -81,10 +90,42 @@ ul {
     opacity: 1;
 }
 
-img {
+.logo {
     height: auto;
     width: 15rem;
     margin-top: 10rem;
+}
+
+@media (max-width: 576px) {
+    .cl-effect-7 a {
+        font-size: 1em;
+    }
+
+    .logo {
+        margin-top: 0;
+        order: 1;
+    }
+
+    .home {
+        order: 2;
+    }
+
+    .menu {
+        order: 3;
+    }
+
+    .locations {
+        order: 4;
+    }
+
+    .contact-info {
+        order: 5;
+    }
+}
+
+img {
+    height: auto;
+    max-width: 100%;
 }
 
 html {
