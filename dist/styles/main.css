@@ -142,7 +142,25 @@ nav a {
 
 main {
     display: flex;
+    flex: 1;
     flex-flow: column wrap;
+}
+
+.placeholder-container {
+    display: flex;
+    flex: 1;
+}
+
+.center {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.center:first-child {
+    padding: 5%;
 }
 
 .image-wrapper {
@@ -314,6 +332,8 @@ html {
 
 body {
     background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-flow: column wrap;
     font-family: "Almarai", sans-serif;
     font-size: 1.6rem;
     min-height: 100%;
